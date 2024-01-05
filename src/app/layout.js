@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body
         className={cn(
           inter.className,
-          "h-screen bg-gray-200 dark:bg-[#141417] overflow-hidden"
+          "h-screen bg-white dark:bg-[#141417] overflow-hidden"
         )}
       >
         <ThemeProvider>{children}</ThemeProvider>

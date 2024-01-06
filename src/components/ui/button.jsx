@@ -6,7 +6,9 @@ const Button = ({ text, icon, action, customClass }) => {
       className={cn(
         customClass,
         "flex items-center gap-1.5 px-3 py-1.5 my-2 drop-shadow-sm rounded text-xs transition-all duration-300 ease-out"
+        // disabled && "opacity-50 cursor-default"
       )}
+      onClick={action}
     >
       {text}
       {icon}

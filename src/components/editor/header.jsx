@@ -1,9 +1,11 @@
+"use client";
+
 import Button from "../ui/button";
 import { Copy } from "lucide-react";
 import { Eraser } from "lucide-react";
 import { Play } from "lucide-react";
 
-const EditorHeader = () => {
+const EditorHeader = ({ handleQueryRun, query }) => {
   return (
     <div className="flex justify-between pr-8">
       {/* left-side  */}
@@ -15,19 +17,26 @@ const EditorHeader = () => {
       <div className="flex gap-4 text-sm">
         <Button
           text="Copy"
-          customClass="bg-gray-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-gray-200 hover:dark:bg-zinc-700"
+          customClass={`bg-gray-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-gray-200 hover:dark:bg-zinc-700 ${
+            !query ? "opacity-40" : ""
+          }`}
           icon={<Copy size={12} />}
         />
         <Button
           text="Clear"
-          customClass="bg-gray-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-gray-200 hover:dark:bg-zinc-700"
+          customClass={`bg-gray-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-gray-200 hover:dark:bg-zinc-700 ${
+            !query ? "opacity-40" : ""
+          }`}
           icon={<Eraser size={12} />}
         />
 
         <Button
           text="Run"
-          customClass="bg-black dark:bg-white text-white dark:text-gray-800 border border-gray-100 hover:bg-zinc-700 hover:dark:bg-gray-300"
+          customClass={`bg-black dark:bg-white text-white dark:text-gray-800 border border-gray-100 hover:bg-zinc-700 hover:dark:bg-gray-300  ${
+            !query ? "opacity-40" : ""
+          }`}
           icon={<Play size={12} />}
+          action={handleQueryRun}
         />
       </div>
     </div>

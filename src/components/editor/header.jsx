@@ -30,7 +30,7 @@ const EditorHeader = ({ handleQueryRun, query, setQuery }) => {
             !query ? "opacity-50" : ""
           }`}
           icon={<Eraser size={12} />}
-          action={() => Clear(setQuery)}
+          action={() => Clear(setQuery, query)}
         />
 
         <Button

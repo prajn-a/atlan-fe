@@ -4,11 +4,11 @@
 - [x] select query
 - [x] editor support
 - [x] output data proper
-- [ ] implement output table
+- [x] implement output table
 - [ ] export as json, csv
 - [x] history of query executed
-- [ ] copy action
-- [ ] clear action
+- [x] copy action
+- [x] clear action
 - [x] run action
 - [ ] optimization
   - [ ] lazy loading

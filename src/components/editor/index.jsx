@@ -26,7 +26,11 @@ const Editor = ({ handleQueryRun, query, setQuery, output, loading }) => {
   return (
     <div className="w-1/2">
       {/* editor header  */}
-      <EditorHeader handleQueryRun={handleQueryRun} query={query} />
+      <EditorHeader
+        handleQueryRun={handleQueryRun}
+        query={query}
+        setQuery={setQuery}
+      />
 
       <CodeMirror
         theme={theme === "dark" ? tokyoNight : bbedit}

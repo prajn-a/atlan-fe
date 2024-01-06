@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Toaster } from "sonner";
 
 import Editor from "@/components/editor";
 import Header from "@/components/navigation/header";
@@ -49,7 +50,9 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen">
+    <main className="h-screen overflow-hidden">
+      <Toaster position="top-right" richColors />
+
       <Header />
 
       {/* layout  */}

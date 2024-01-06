@@ -14,12 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          inter.className,
-          "h-screen bg-white dark:bg-[#141417] overflow-hidden"
-        )}
-      >
+      <body className={cn(inter.className, "bg-white dark:bg-[#141417]")}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

@@ -1,11 +1,12 @@
 "use client";
 
 import Button from "../ui/button";
-import { Copy } from "lucide-react";
+import { Copy as CopyIcon } from "lucide-react";
 import { Eraser } from "lucide-react";
 import { Play } from "lucide-react";
+import { Clear, Copy } from "@/lib/actions";
 
-const EditorHeader = ({ handleQueryRun, query }) => {
+const EditorHeader = ({ handleQueryRun, query, setQuery }) => {
   return (
     <div className="flex justify-between pr-8">
       {/* left-side  */}
@@ -18,22 +19,24 @@ const EditorHeader = ({ handleQueryRun, query }) => {
         <Button
           text="Copy"
           customClass={`bg-gray-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-gray-200 hover:dark:bg-zinc-700 ${
-            !query ? "opacity-40" : ""
+            !query ? "opacity-50" : ""
           }`}
-          icon={<Copy size={12} />}
+          icon={<CopyIcon size={12} />}
+          action={() => Copy(query)}
         />
         <Button
           text="Clear"
           customClass={`bg-gray-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 hover:bg-gray-200 hover:dark:bg-zinc-700 ${
-            !query ? "opacity-40" : ""
+            !query ? "opacity-50" : ""
           }`}
           icon={<Eraser size={12} />}
+          action={() => Clear(setQuery)}
         />
 
         <Button
           text="Run"
           customClass={`bg-black dark:bg-white text-white dark:text-gray-800 border border-gray-100 hover:bg-zinc-700 hover:dark:bg-gray-300  ${
-            !query ? "opacity-40" : ""
+            !query ? "opacity-50" : ""
           }`}
           icon={<Play size={12} />}
           action={handleQueryRun}

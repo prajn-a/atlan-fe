@@ -1,6 +1,8 @@
 ![atlan-fe](https://github.com/prajn-a/atlan-fe/assets/155552763/9189681d-380c-417f-b4c2-98f8d83fae99)
 
+A web-based application capable of running SQL queries and displaying the results of said query. The application includes a space which accepts SQL queries in the form of user inputs, then runs the given query, and displays the result within the application.
 
+- Data used in the application is taken from [here](https://github.com/graphql-compose/graphql-compose-examples/tree/master/examples/northwind/data/csv)
 
 ### Techstack
 
@@ -8,11 +10,11 @@
 
 ### Dependencies
 
- - `lucide-react`: Package used for icons
- - `next-themes`: An abstraction to handle themes in nextjs
- - `papaparese`: CSV parser for javascript
- - `sonner`: A toast notification library
- - `codemirror`: It is a code editor component for the web. It can be used in websites to implement a text input field with support for many editing features, and has a rich programming interface to allow further extension.
+- `lucide-react`: Package used for icons
+- `next-themes`: An abstraction to handle themes in nextjs
+- `papaparese`: CSV parser for javascript
+- `sonner`: A toast notification library
+- `codemirror`: It is a code editor component for the web. It can be used in websites to implement a text input field with support for many editing features, and has a rich programming interface to allow further extension.
 
 ### Features
 
@@ -23,7 +25,14 @@
 - **Copy, Clear**: User can copy the query entered in the editor or clear it completely as required.
 - **Output**: User can view the output of a particular query execution in the form of table.
 - **Export output**: User can export the table retrived as either JSON or CSV as required.
-- **Toast Notifications** : User receives toast notification for certain events.
+- **Toast Notifications** : User receives toast notification for edge cases.
+
+### Performance
+
+Google Lighthouse
+![lighthouse](/public/lighthouse.png)
+
+![pagespeed](/public/pagespeed.png)
 
 ### Run the website locally
 

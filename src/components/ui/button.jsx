@@ -5,7 +5,7 @@ const Button = ({ text, icon, action, customClass }) => {
     <div
       className={cn(
         customClass,
-        "flex items-center gap-1.5 px-2.5 py-1.5 my-2 drop-shadow-sm rounded text-xs transition-all duration-300 ease-out"
+        "flex items-center gap-1.5 px-2.5 py-1.5 my-2 drop-shadow-sm rounded text-xs transition-all duration-300 ease-out cursor-pointer"
       )}
       onClick={action}
     >

@@ -1,10 +1,11 @@
 import React from "react";
+import { toast } from "sonner";
 import { Trash2 } from "lucide-react";
 
 const History = ({ history, setHistory, setQuery }) => {
   const handleClearHistory = () => {
     if (history.length < 1) {
-      window.confirm("No history to delete!");
+      toast.error("No history to delete");
     } else {
       const userConfirmation = window.confirm(
         "Do you want to delete your history?"

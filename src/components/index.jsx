@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Toaster } from "sonner";
+import { Toaster, toast } from "sonner";
 
 import Editor from "@/components/editor";
 import Header from "@/components/navigation/header";
@@ -19,7 +19,7 @@ export default function SqlEditor() {
 
   const handleQueryRun = () => {
     if (!query) {
-      window.confirm("Please enter a query");
+      toast.error("Please enter a query!");
     } else {
       setLoading(true);
 

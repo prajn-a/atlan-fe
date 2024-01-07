@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { sql } from "@codemirror/lang-sql";
 import { bbedit } from "@uiw/codemirror-theme-bbedit";
@@ -33,7 +33,7 @@ const Editor = ({ handleQueryRun, query, setQuery, output, loading }) => {
       />
 
       <CodeMirror
-        theme={theme === "dark" ? tokyoNight : bbedit}
+        theme={theme === "light" ? bbedit : tokyoNight}
         value={query}
         height="280px"
         extensions={[sql()]}

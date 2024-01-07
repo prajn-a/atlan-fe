@@ -31,7 +31,7 @@ const Output = ({ output, loading }) => {
       </div>
 
       {output.length < 1 ? (
-        <p className="my-32 text-center text-sm text-zinc-600">
+        <p className="my-32 text-center text-sm text-zinc-300">
           Run a query to see output
         </p>
       ) : (

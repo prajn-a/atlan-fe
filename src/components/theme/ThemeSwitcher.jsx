@@ -15,7 +15,7 @@ const ThemeSwitcher = () => {
   if (!mounted) return null;
 
   return (
-    <button
+    <div
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className="p-1.5 rounded-md hover:dark:bg-zinc-800 hover:bg-gray-300 transition-all ease-out duration-100"
     >
@@ -24,7 +24,7 @@ const ThemeSwitcher = () => {
       ) : (
         <Moon size={17} strokeWidth={2} />
       )}
-    </button>
+    </div>
   );
 };
 

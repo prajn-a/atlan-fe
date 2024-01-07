@@ -55,7 +55,7 @@ export default function SqlEditor() {
       <Header />
 
       {/* layout  */}
-      <section className="flex">
+      <div className="flex">
         {/* sidebar  */}
         <Sidebar
           setQuery={setQuery}
@@ -74,7 +74,7 @@ export default function SqlEditor() {
 
         {/* schema  */}
         <Schema />
-      </section>
+      </div>
     </main>
   );
 }

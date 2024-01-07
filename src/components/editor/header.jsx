@@ -4,7 +4,7 @@ import Button from "../ui/button";
 import { Copy as CopyIcon } from "lucide-react";
 import { Eraser } from "lucide-react";
 import { Play } from "lucide-react";
-import { Clear, Copy } from "@/lib/actions";
+// import { Clear, Copy } from "@/lib/actions";
 
 const EditorHeader = ({ handleQueryRun, query, setQuery }) => {
   return (
@@ -22,7 +22,12 @@ const EditorHeader = ({ handleQueryRun, query, setQuery }) => {
             !query ? "opacity-50" : ""
           }`}
           icon={<CopyIcon size={12} />}
-          action={() => Copy(query)}
+          // action={() => Copy(query)}
+          action={() => {
+            import("@/lib/actions").then((module) => {
+              module.Copy(query);
+            });
+          }}
         />
         <Button
           text="Clear"
@@ -30,7 +35,12 @@ const EditorHeader = ({ handleQueryRun, query, setQuery }) => {
             !query ? "opacity-50" : ""
           }`}
           icon={<Eraser size={12} />}
-          action={() => Clear(setQuery, query)}
+          // action={() => Clear(setQuery, query)}
+          action={() => {
+            import("@/lib/actions").then((module) => {
+              module.Clear(setQuery, query);
+            });
+          }}
         />
 
         <Button

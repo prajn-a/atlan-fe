@@ -1,21 +1,45 @@
-### features
+### Techstack
 
-- [x] theme toggle
-- [x] select query
-- [x] editor support
-- [x] output data proper
-- [x] implement output table
-- [x] export as json, csv
-- [x] history of query executed
-- [x] copy action
-- [x] clear action
-- [x] run action
-- [ ] optimization
-  - [ ] lazy loading
-  - [ ] memo and useMemo
-- [ ] handle edge cases
-  - [x] disable history delete button, when no history/ or give appropriate message
-  - [x] disable query run,copy,clear button when no query entered
-  - [x] loading state for output
-  - [ ] handle something when any query other than the 4 is used.
-- [ ] localstorage support (often used for web based editor)
+`Nextjs` with `JavaScript` & `TailwindCSS`
+
+### Dependencies
+
+`lucide-react`: Package used for icons
+`next-themes`: An abstraction to handle themes in nextjs
+`papaparese`: CSV parser for javascript
+`sonner`: A toast notification library
+`codemirror`: It is a code editor component for the web. It can be used in websites to implement a text input field with support for many editing features, and has a rich programming interface to allow further extension.
+
+### Features
+
+- **Toggle Theme** : User can set theme as per convenience
+- **Schema Representation:** User can see schema of available table. This helps user get information about the data type of different field and helps in performing appropriate query.
+- **Query Selection** : User can toggle between different available query.
+- **History** : Executed query is represented in the history componenent on the sidebar. The user can select these query to execute again.
+- **Copy, Clear**: User can copy the query entered in the editor or clear it completely as required.
+- **Output**: User can view the output of a particular query execution in the form of table.
+- **Export output**: User can export the table retrived as either JSON or CSV as required.
+- **Toast Notifications** : User receives toast notification for certain events.
+
+### Run the website locally
+
+```
+git clone https://github.com/prajn-a/atlan-fe.git
+```
+
+### Setting up the project
+
+```bash
+cd atlan-fe
+
+# Install dependencies
+npm install
+```
+
+### Starting server
+
+```bash
+npm dev
+```
+
+Server should now be running on [localhost](https://localhost:3000)

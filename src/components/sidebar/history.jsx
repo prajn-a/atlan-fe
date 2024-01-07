@@ -24,7 +24,9 @@ const History = ({ history, setHistory, setQuery }) => {
 
       {/* map queries  */}
       {history.length < 1 ? (
-        <p className="my-20 text-sm text-zinc-300">No History</p>
+        <p className="my-20 text-sm text-zinc-600 dark:text-zinc-300">
+          No History
+        </p>
       ) : (
         <ul className="flex flex-col gap-4 my-6 cursor-pointer px-4 overflow-y-scroll">
           {history?.map((item) => (

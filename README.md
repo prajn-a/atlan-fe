@@ -5,7 +5,7 @@
 - [x] editor support
 - [x] output data proper
 - [x] implement output table
-- [ ] export as json, csv
+- [x] export as json, csv
 - [x] history of query executed
 - [x] copy action
 - [x] clear action

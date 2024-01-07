@@ -1419,3 +1419,86 @@ export const Shipper = [
     phone: "(503) 555-9931",
   },
 ];
+
+export const Default = [
+  {
+    territoryID: 1833,
+    name: "Georgetow",
+    country: "USA",
+  },
+  {
+    territoryID: 1581,
+    name: "Westboro",
+    country: "USA",
+  },
+  {
+    territoryID: 2116,
+    name: "Boston",
+    country: "USA",
+  },
+  {
+    territoryID: 2139,
+    name: "Cambridge",
+    country: "USA",
+  },
+  {
+    territoryID: 1730,
+    name: "Bedford",
+    country: "USA",
+  },
+  {
+    territoryID: 2903,
+    name: "Providence",
+    country: "USA",
+  },
+  {
+    territoryID: 6897,
+    name: "Wilton",
+    country: "USA",
+  },
+  {
+    territoryID: 7960,
+    name: "Morristown",
+    country: "USA",
+  },
+  {
+    territoryID: 8837,
+    name: "Edison",
+    country: "USA",
+  },
+  {
+    territoryID: 10019,
+    name: "NewYork",
+    country: "USA",
+  },
+  {
+    territoryID: 10038,
+    name: "NewYork",
+    country: "USA",
+  },
+  {
+    territoryID: 11747,
+    name: "Mellvile",
+    country: "USA",
+  },
+  {
+    territoryID: 14450,
+    name: "Fairport",
+    country: "USA",
+  },
+  {
+    territoryID: 19713,
+    name: "Neward",
+    country: "USA",
+  },
+  {
+    territoryID: 2184,
+    name: "Braintree",
+    country: "USA",
+  },
+  {
+    territoryID: 20852,
+    name: "Rockville",
+    country: "USA",
+  },
+];

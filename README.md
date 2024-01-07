@@ -32,6 +32,7 @@ A web-based application capable of running SQL queries and displaying the result
 Google Lighthouse
 ![lighthouse](/public/lighthouse.png)
 
+Page Speed
 ![pagespeed](/public/pagespeed.png)
 
 ### Run the website locally

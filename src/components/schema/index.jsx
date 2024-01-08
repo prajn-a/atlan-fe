@@ -1,5 +1,3 @@
-"use client";
-
 import { Customer, Product, Category, Shipper } from "@/data/data";
 import { Database } from "lucide-react";
 

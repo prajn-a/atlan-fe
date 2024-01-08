@@ -23,4 +23,6 @@ const Sidebar = ({ setQuery, history, setHistory }) => {
   );
 };
 
+// Sidebar.displayName = "Sidebar";
+
 export default Sidebar;

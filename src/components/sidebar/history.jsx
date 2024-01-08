@@ -6,13 +6,15 @@ const History = ({ history, setHistory, setQuery }) => {
   const handleClearHistory = () => {
     if (history.length < 1) {
       toast.error("No history to delete");
-    } else {
-      const userConfirmation = window.confirm(
-        "Do you want to delete your history?"
-      );
-      if (userConfirmation) {
-        setHistory([]);
-      }
+      return;
+    }
+
+    const userConfirmation = window.confirm(
+      "Do you want to delete your history?"
+    );
+    if (userConfirmation) {
+      setHistory([]);
+      toast.success("History cleared successfully");
     }
   };
 

@@ -18,14 +18,14 @@ A web-based application capable of running SQL queries and displaying the result
 
 ### Features
 
-- **Toggle Theme** : User can toggle between dark & light theme as per convenience
-- **Schema Representation:** User can see schema of available table. This helps user get information about the data type of different field and helps in performing appropriate query.
-- **Query Selection** : User can toggle between different available query.
-- **History** : Executed query is represented in the history componenent on the sidebar. The user can select these query to execute again.
-- **Copy, Clear**: User can copy the query entered in the editor or clear it completely as required.
-- **Output**: User can view the output of a particular query execution in the form of table.
-- **Export output**: User can export the table retrived as either JSON or CSV as required.
-- **Toast Notifications** : User receives toast notification for edge cases.
+- **Toggle Theme:** Users can switch between dark and light themes for a personalized viewing experience, enhancing readability and reducing eye strain.
+- **Schema Representation:** Gain insights into table structures with schema representation, offering a quick overview of data types, aiding users in crafting precise and effective queries.
+- **Query Selection** : Seamlessly switch between predefined queries, streamlining the process of exploring and retrieving specific data sets.
+- **History** : Access a convenient history of executed queries, empowering users to revisit and rerun previous queries effortlessly for improved workflow efficiency.
+- **Copy, Clear**: Easily manage entered queries by copying them for reference or clearing the editor, providing flexibility and control over the query input.
+- **Output**: Visualize query results in a tabular format, enabling users to interpret and analyze data output more effectively.
+- **Export output**: Empower users to export query results as JSON or CSV, facilitating seamless integration with other tools and systems.
+- **Toast Notifications** : Instantly receive concise and informative notifications alerting users to critical events and error messages, ensuring swift awareness of potential issues.
 
 ### Performance
 
@@ -34,6 +34,13 @@ Google Lighthouse
 
 Page Speed
 ![pagespeed](/public/pagespeed.png)
+
+### Optimization
+
+1. **useMemo & useCallback:** I used useMemo(Memoization) to optimize the handleQueryRun function, preventing unnecessary recalculations, and useCallback to memoize the onChange callback for efficient rendering and improved user interaction in the application.
+2. **Dynamic Imports:** Employed dynamic imports for functions like Copy and Clear, etc to efficiently load and execute them when needed.
+3. **Functional Component Memoization:** Wrapped the Sidebar component with React.memo for improved rendering performance when props remain the same.
+4. **Toaster Component:** Used the Toaster component for displaying notifications, enhancing user feedback without blocking the main thread.
 
 ### Run the website locally
 

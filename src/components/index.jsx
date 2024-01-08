@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Toaster, toast } from "sonner";
 
 import Editor from "@/components/editor";
@@ -17,13 +17,15 @@ export default function SqlEditor() {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const handleQueryRun = () => {
-    if (!query) {
-      toast.error("Please enter a query!");
-    } else {
+  const handleQueryRun = useMemo(
+    () => () => {
+      if (!query) {
+        toast.error("Please enter a query!");
+        return;
+      }
+
       setLoading(true);
 
-      // maping data based on query
       let data;
       switch (query.toLowerCase()) {
         case "select * from customer ;":
@@ -45,8 +47,9 @@ export default function SqlEditor() {
       setOutput(data);
       setLoading(false);
       setHistory([...history, query]);
-    }
-  };
+    },
+    [query, history]
+  );
 
   return (
     <main className="h-screen overflow-hidden">

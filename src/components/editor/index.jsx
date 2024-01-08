@@ -46,5 +46,3 @@ const Editor = ({ handleQueryRun, query, setQuery, output, loading }) => {
 };
 
 export default Editor;
-
-// theme={isDark ? tokyoNight : bbedit}
